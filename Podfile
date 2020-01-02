@@ -1,15 +1,14 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+use_frameworks!
+
+def common_pods
+  pod 'Alamofire'
+end
 
 target 'Schibsted' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for Schibsted
-
-  target 'SchibstedTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
+  common_pods
 end
+
+target 'SchibstedTests' do
+  common_pods
+end
+
