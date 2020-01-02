@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53D4D1C92D91C1F9AB12C7E3 /* Pods_SchibstedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE425A4A5D2EE7B75F8C211E /* Pods_SchibstedTests.framework */; };
+		E794FEBA871816EA751D476C /* Pods_Schibsted.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA58250ED8E8F3703B150F0C /* Pods_Schibsted.framework */; };
 		FAFB839C23BE140900B1B524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB839B23BE140900B1B524 /* AppDelegate.swift */; };
 		FAFB839E23BE140900B1B524 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB839D23BE140900B1B524 /* SceneDelegate.swift */; };
 		FAFB83A023BE140900B1B524 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB839F23BE140900B1B524 /* ViewController.swift */; };
@@ -27,6 +29,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		740D9B62F8B340B51191D283 /* Pods-SchibstedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchibstedTests.debug.xcconfig"; path = "Target Support Files/Pods-SchibstedTests/Pods-SchibstedTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A4714346AA0FD97CD396837D /* Pods-Schibsted.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Schibsted.debug.xcconfig"; path = "Target Support Files/Pods-Schibsted/Pods-Schibsted.debug.xcconfig"; sourceTree = "<group>"; };
+		BE425A4A5D2EE7B75F8C211E /* Pods_SchibstedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchibstedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C911219085A3B72B64792DF7 /* Pods-Schibsted.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Schibsted.release.xcconfig"; path = "Target Support Files/Pods-Schibsted/Pods-Schibsted.release.xcconfig"; sourceTree = "<group>"; };
+		DA58250ED8E8F3703B150F0C /* Pods_Schibsted.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Schibsted.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F32F8D3941A2295DF1989EBE /* Pods-SchibstedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchibstedTests.release.xcconfig"; path = "Target Support Files/Pods-SchibstedTests/Pods-SchibstedTests.release.xcconfig"; sourceTree = "<group>"; };
 		FAFB839823BE140900B1B524 /* Schibsted.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Schibsted.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFB839B23BE140900B1B524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFB839D23BE140900B1B524 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E794FEBA871816EA751D476C /* Pods_Schibsted.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +61,62 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53D4D1C92D91C1F9AB12C7E3 /* Pods_SchibstedTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BE38E4357756D231005790C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A4714346AA0FD97CD396837D /* Pods-Schibsted.debug.xcconfig */,
+				C911219085A3B72B64792DF7 /* Pods-Schibsted.release.xcconfig */,
+				740D9B62F8B340B51191D283 /* Pods-SchibstedTests.debug.xcconfig */,
+				F32F8D3941A2295DF1989EBE /* Pods-SchibstedTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DE5873EA4277EEEB7876C936 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA58250ED8E8F3703B150F0C /* Pods_Schibsted.framework */,
+				BE425A4A5D2EE7B75F8C211E /* Pods_SchibstedTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAE443D923BE14600070A572 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FAE443DA23BE146B0070A572 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FAE443DB23BE14730070A572 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FAFB838F23BE140900B1B524 = {
 			isa = PBXGroup;
 			children = (
 				FAFB839A23BE140900B1B524 /* Schibsted */,
 				FAFB83B123BE140A00B1B524 /* SchibstedTests */,
 				FAFB839923BE140900B1B524 /* Products */,
+				2BE38E4357756D231005790C /* Pods */,
+				DE5873EA4277EEEB7876C936 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +132,9 @@
 		FAFB839A23BE140900B1B524 /* Schibsted */ = {
 			isa = PBXGroup;
 			children = (
+				FAE443DB23BE14730070A572 /* Models */,
+				FAE443DA23BE146B0070A572 /* Components */,
+				FAE443D923BE14600070A572 /* Network */,
 				FAFB839B23BE140900B1B524 /* AppDelegate.swift */,
 				FAFB839D23BE140900B1B524 /* SceneDelegate.swift */,
 				FAFB839F23BE140900B1B524 /* ViewController.swift */,
@@ -106,6 +162,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAFB83B723BE140A00B1B524 /* Build configuration list for PBXNativeTarget "Schibsted" */;
 			buildPhases = (
+				DD0458E59645785C4B5EA202 /* [CP] Check Pods Manifest.lock */,
 				FAFB839423BE140900B1B524 /* Sources */,
 				FAFB839523BE140900B1B524 /* Frameworks */,
 				FAFB839623BE140900B1B524 /* Resources */,
@@ -123,6 +180,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAFB83BA23BE140A00B1B524 /* Build configuration list for PBXNativeTarget "SchibstedTests" */;
 			buildPhases = (
+				88632A1D8A44C7FD827C4908 /* [CP] Check Pods Manifest.lock */,
 				FAFB83AA23BE140A00B1B524 /* Sources */,
 				FAFB83AB23BE140A00B1B524 /* Frameworks */,
 				FAFB83AC23BE140A00B1B524 /* Resources */,
@@ -194,6 +252,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		88632A1D8A44C7FD827C4908 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SchibstedTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD0458E59645785C4B5EA202 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Schibsted-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FAFB839423BE140900B1B524 /* Sources */ = {
@@ -360,6 +465,7 @@
 		};
 		FAFB83B823BE140A00B1B524 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4714346AA0FD97CD396837D /* Pods-Schibsted.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +484,7 @@
 		};
 		FAFB83B923BE140A00B1B524 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C911219085A3B72B64792DF7 /* Pods-Schibsted.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +503,7 @@
 		};
 		FAFB83BB23BE140A00B1B524 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 740D9B62F8B340B51191D283 /* Pods-SchibstedTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -418,6 +526,7 @@
 		};
 		FAFB83BC23BE140A00B1B524 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F32F8D3941A2295DF1989EBE /* Pods-SchibstedTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
