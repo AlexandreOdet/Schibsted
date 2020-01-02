@@ -3,13 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		53D4D1C92D91C1F9AB12C7E3 /* Pods_SchibstedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE425A4A5D2EE7B75F8C211E /* Pods_SchibstedTests.framework */; };
 		E794FEBA871816EA751D476C /* Pods_Schibsted.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA58250ED8E8F3703B150F0C /* Pods_Schibsted.framework */; };
 		FAE443DE23BE17F20070A572 /* EventStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443DD23BE17F20070A572 /* EventStatus.swift */; };
+		FAE443E123BE1A3E0070A572 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443E023BE1A3E0070A572 /* Cancellable.swift */; };
+		FAE443E323BE1A5B0070A572 /* Reachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443E223BE1A5B0070A572 /* Reachable.swift */; };
+		FAE443E523BE1BE40070A572 /* RestAPIBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443E423BE1BE40070A572 /* RestAPIBase.swift */; };
+		FAE443E723BE1C460070A572 /* RestAPIEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443E623BE1C460070A572 /* RestAPIEvent.swift */; };
+		FAE443E923BE1C880070A572 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443E823BE1C880070A572 /* Routes.swift */; };
+		FAE443EB23BE1E1C0070A572 /* ImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443EA23BE1E1C0070A572 /* ImageSize.swift */; };
 		FAFB839C23BE140900B1B524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB839B23BE140900B1B524 /* AppDelegate.swift */; };
 		FAFB839E23BE140900B1B524 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB839D23BE140900B1B524 /* SceneDelegate.swift */; };
 		FAFB83A023BE140900B1B524 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB839F23BE140900B1B524 /* ViewController.swift */; };
@@ -37,6 +43,12 @@
 		DA58250ED8E8F3703B150F0C /* Pods_Schibsted.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Schibsted.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F32F8D3941A2295DF1989EBE /* Pods-SchibstedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchibstedTests.release.xcconfig"; path = "Target Support Files/Pods-SchibstedTests/Pods-SchibstedTests.release.xcconfig"; sourceTree = "<group>"; };
 		FAE443DD23BE17F20070A572 /* EventStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStatus.swift; sourceTree = "<group>"; };
+		FAE443E023BE1A3E0070A572 /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
+		FAE443E223BE1A5B0070A572 /* Reachable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachable.swift; sourceTree = "<group>"; };
+		FAE443E423BE1BE40070A572 /* RestAPIBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIBase.swift; sourceTree = "<group>"; };
+		FAE443E623BE1C460070A572 /* RestAPIEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIEvent.swift; sourceTree = "<group>"; };
+		FAE443E823BE1C880070A572 /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		FAE443EA23BE1E1C0070A572 /* ImageSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSize.swift; sourceTree = "<group>"; };
 		FAFB839823BE140900B1B524 /* Schibsted.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Schibsted.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFB839B23BE140900B1B524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFB839D23BE140900B1B524 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +105,9 @@
 		FAE443D923BE14600070A572 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				FAE443DF23BE1A1E0070A572 /* Protocols */,
+				FAE443E423BE1BE40070A572 /* RestAPIBase.swift */,
+				FAE443E623BE1C460070A572 /* RestAPIEvent.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -115,8 +130,19 @@
 			isa = PBXGroup;
 			children = (
 				FAE443DD23BE17F20070A572 /* EventStatus.swift */,
+				FAE443E823BE1C880070A572 /* Routes.swift */,
+				FAE443EA23BE1E1C0070A572 /* ImageSize.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		FAE443DF23BE1A1E0070A572 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FAE443E023BE1A3E0070A572 /* Cancellable.swift */,
+				FAE443E223BE1A5B0070A572 /* Reachable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		FAFB838F23BE140900B1B524 = {
@@ -352,10 +378,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE443E123BE1A3E0070A572 /* Cancellable.swift in Sources */,
 				FAFB83A023BE140900B1B524 /* ViewController.swift in Sources */,
 				FAFB839C23BE140900B1B524 /* AppDelegate.swift in Sources */,
+				FAE443E523BE1BE40070A572 /* RestAPIBase.swift in Sources */,
+				FAE443E923BE1C880070A572 /* Routes.swift in Sources */,
+				FAE443E323BE1A5B0070A572 /* Reachable.swift in Sources */,
 				FAE443DE23BE17F20070A572 /* EventStatus.swift in Sources */,
 				FAFB839E23BE140900B1B524 /* SceneDelegate.swift in Sources */,
+				FAE443EB23BE1E1C0070A572 /* ImageSize.swift in Sources */,
+				FAE443E723BE1C460070A572 /* RestAPIEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
