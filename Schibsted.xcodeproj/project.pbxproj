@@ -16,6 +16,13 @@
 		FAE443E723BE1C460070A572 /* RestAPIEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443E623BE1C460070A572 /* RestAPIEvent.swift */; };
 		FAE443E923BE1C880070A572 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443E823BE1C880070A572 /* Routes.swift */; };
 		FAE443EB23BE1E1C0070A572 /* ImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443EA23BE1E1C0070A572 /* ImageSize.swift */; };
+		FAE443ED23BE20DD0070A572 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443EC23BE20DD0070A572 /* League.swift */; };
+		FAE443EF23BE21030070A572 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443EE23BE21030070A572 /* Event.swift */; };
+		FAE443F123BE22360070A572 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443F023BE22360070A572 /* Team.swift */; };
+		FAE443F323BE26D00070A572 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443F223BE26D00070A572 /* Result.swift */; };
+		FAE443F523BE26E90070A572 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443F423BE26E90070A572 /* Score.swift */; };
+		FAE443F723BE27580070A572 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443F623BE27580070A572 /* Status.swift */; };
+		FAE443F923BE27660070A572 /* StatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443F823BE27660070A572 /* StatusType.swift */; };
 		FAFB839C23BE140900B1B524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB839B23BE140900B1B524 /* AppDelegate.swift */; };
 		FAFB839E23BE140900B1B524 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB839D23BE140900B1B524 /* SceneDelegate.swift */; };
 		FAFB83A023BE140900B1B524 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB839F23BE140900B1B524 /* ViewController.swift */; };
@@ -49,6 +56,13 @@
 		FAE443E623BE1C460070A572 /* RestAPIEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIEvent.swift; sourceTree = "<group>"; };
 		FAE443E823BE1C880070A572 /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		FAE443EA23BE1E1C0070A572 /* ImageSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSize.swift; sourceTree = "<group>"; };
+		FAE443EC23BE20DD0070A572 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
+		FAE443EE23BE21030070A572 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		FAE443F023BE22360070A572 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		FAE443F223BE26D00070A572 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		FAE443F423BE26E90070A572 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		FAE443F623BE27580070A572 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		FAE443F823BE27660070A572 /* StatusType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusType.swift; sourceTree = "<group>"; };
 		FAFB839823BE140900B1B524 /* Schibsted.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Schibsted.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFB839B23BE140900B1B524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFB839D23BE140900B1B524 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +136,13 @@
 		FAE443DB23BE14730070A572 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FAE443EC23BE20DD0070A572 /* League.swift */,
+				FAE443EE23BE21030070A572 /* Event.swift */,
+				FAE443F023BE22360070A572 /* Team.swift */,
+				FAE443F223BE26D00070A572 /* Result.swift */,
+				FAE443F423BE26E90070A572 /* Score.swift */,
+				FAE443F623BE27580070A572 /* Status.swift */,
+				FAE443F823BE27660070A572 /* StatusType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -380,13 +401,20 @@
 			files = (
 				FAE443E123BE1A3E0070A572 /* Cancellable.swift in Sources */,
 				FAFB83A023BE140900B1B524 /* ViewController.swift in Sources */,
+				FAE443F123BE22360070A572 /* Team.swift in Sources */,
+				FAE443F923BE27660070A572 /* StatusType.swift in Sources */,
 				FAFB839C23BE140900B1B524 /* AppDelegate.swift in Sources */,
+				FAE443F523BE26E90070A572 /* Score.swift in Sources */,
+				FAE443F323BE26D00070A572 /* Result.swift in Sources */,
 				FAE443E523BE1BE40070A572 /* RestAPIBase.swift in Sources */,
+				FAE443EF23BE21030070A572 /* Event.swift in Sources */,
 				FAE443E923BE1C880070A572 /* Routes.swift in Sources */,
 				FAE443E323BE1A5B0070A572 /* Reachable.swift in Sources */,
 				FAE443DE23BE17F20070A572 /* EventStatus.swift in Sources */,
+				FAE443F723BE27580070A572 /* Status.swift in Sources */,
 				FAFB839E23BE140900B1B524 /* SceneDelegate.swift in Sources */,
 				FAE443EB23BE1E1C0070A572 /* ImageSize.swift in Sources */,
+				FAE443ED23BE20DD0070A572 /* League.swift in Sources */,
 				FAE443E723BE1C460070A572 /* RestAPIEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
