@@ -12,6 +12,8 @@ import Alamofire
 class RestAPIBase: Cancellable {
     var currentRequest: Alamofire.Request?
     
+    let baseUrl = "https://sports-app-code-test.herokuapp.com/api/events"
+    
     func cancel() {
         currentRequest?.cancel()
     }

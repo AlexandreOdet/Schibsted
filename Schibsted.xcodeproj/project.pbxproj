@@ -14,7 +14,6 @@
 		FAE443E323BE1A5B0070A572 /* Reachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443E223BE1A5B0070A572 /* Reachable.swift */; };
 		FAE443E523BE1BE40070A572 /* RestAPIBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443E423BE1BE40070A572 /* RestAPIBase.swift */; };
 		FAE443E723BE1C460070A572 /* RestAPIEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443E623BE1C460070A572 /* RestAPIEvent.swift */; };
-		FAE443E923BE1C880070A572 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443E823BE1C880070A572 /* Routes.swift */; };
 		FAE443EB23BE1E1C0070A572 /* ImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443EA23BE1E1C0070A572 /* ImageSize.swift */; };
 		FAE443ED23BE20DD0070A572 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443EC23BE20DD0070A572 /* League.swift */; };
 		FAE443EF23BE21030070A572 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443EE23BE21030070A572 /* Event.swift */; };
@@ -24,7 +23,7 @@
 		FAE443F723BE27580070A572 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443F623BE27580070A572 /* Status.swift */; };
 		FAFB839C23BE140900B1B524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB839B23BE140900B1B524 /* AppDelegate.swift */; };
 		FAFB839E23BE140900B1B524 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB839D23BE140900B1B524 /* SceneDelegate.swift */; };
-		FAFB83A023BE140900B1B524 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB839F23BE140900B1B524 /* ViewController.swift */; };
+		FAFB83A023BE140900B1B524 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB839F23BE140900B1B524 /* EventListViewController.swift */; };
 		FAFB83A323BE140900B1B524 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFB83A123BE140900B1B524 /* Main.storyboard */; };
 		FAFB83A523BE140A00B1B524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFB83A423BE140A00B1B524 /* Assets.xcassets */; };
 		FAFB83A823BE140A00B1B524 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFB83A623BE140A00B1B524 /* LaunchScreen.storyboard */; };
@@ -53,7 +52,6 @@
 		FAE443E223BE1A5B0070A572 /* Reachable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachable.swift; sourceTree = "<group>"; };
 		FAE443E423BE1BE40070A572 /* RestAPIBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIBase.swift; sourceTree = "<group>"; };
 		FAE443E623BE1C460070A572 /* RestAPIEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIEvent.swift; sourceTree = "<group>"; };
-		FAE443E823BE1C880070A572 /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		FAE443EA23BE1E1C0070A572 /* ImageSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSize.swift; sourceTree = "<group>"; };
 		FAE443EC23BE20DD0070A572 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
 		FAE443EE23BE21030070A572 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -64,7 +62,7 @@
 		FAFB839823BE140900B1B524 /* Schibsted.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Schibsted.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFB839B23BE140900B1B524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFB839D23BE140900B1B524 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FAFB839F23BE140900B1B524 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FAFB839F23BE140900B1B524 /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
 		FAFB83A223BE140900B1B524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAFB83A423BE140A00B1B524 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAFB83A723BE140A00B1B524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -127,6 +125,8 @@
 		FAE443DA23BE146B0070A572 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FAFAA4D923BF75C700E3CF97 /* Detail */,
+				FAFAA4D823BF75BB00E3CF97 /* List */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -148,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				FAE443DD23BE17F20070A572 /* EventStatus.swift */,
-				FAE443E823BE1C880070A572 /* Routes.swift */,
 				FAE443EA23BE1E1C0070A572 /* ImageSize.swift */,
 			);
 			path = Enum;
@@ -161,6 +160,21 @@
 				FAE443E223BE1A5B0070A572 /* Reachable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FAFAA4D823BF75BB00E3CF97 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				FAFB839F23BE140900B1B524 /* EventListViewController.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		FAFAA4D923BF75C700E3CF97 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		FAFB838F23BE140900B1B524 = {
@@ -192,7 +206,6 @@
 				FAE443D923BE14600070A572 /* Network */,
 				FAFB839B23BE140900B1B524 /* AppDelegate.swift */,
 				FAFB839D23BE140900B1B524 /* SceneDelegate.swift */,
-				FAFB839F23BE140900B1B524 /* ViewController.swift */,
 				FAFB83A123BE140900B1B524 /* Main.storyboard */,
 				FAFB83A423BE140A00B1B524 /* Assets.xcassets */,
 				FAFB83A623BE140A00B1B524 /* LaunchScreen.storyboard */,
@@ -397,14 +410,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAE443E123BE1A3E0070A572 /* Cancellable.swift in Sources */,
-				FAFB83A023BE140900B1B524 /* ViewController.swift in Sources */,
+				FAFB83A023BE140900B1B524 /* EventListViewController.swift in Sources */,
 				FAE443F123BE22360070A572 /* Team.swift in Sources */,
 				FAFB839C23BE140900B1B524 /* AppDelegate.swift in Sources */,
 				FAE443F523BE26E90070A572 /* Score.swift in Sources */,
 				FAE443F323BE26D00070A572 /* Result.swift in Sources */,
 				FAE443E523BE1BE40070A572 /* RestAPIBase.swift in Sources */,
 				FAE443EF23BE21030070A572 /* Event.swift in Sources */,
-				FAE443E923BE1C880070A572 /* Routes.swift in Sources */,
 				FAE443E323BE1A5B0070A572 /* Reachable.swift in Sources */,
 				FAE443DE23BE17F20070A572 /* EventStatus.swift in Sources */,
 				FAE443F723BE27580070A572 /* Status.swift in Sources */,
