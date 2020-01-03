@@ -19,7 +19,7 @@ class EventListTableViewCell: UITableViewCell {
     @IBOutlet weak var awayTeamNameLabel: UILabel!
     @IBOutlet weak var awayTeamLogoImg: UIImageView!
     
-    @IBOutlet weak var finalScoreView: UIView!
+    @IBOutlet weak var finalOrDateLabel: UILabel!
     
     let boldFont = UIFont.boldSystemFont(ofSize: 16.0)
     
@@ -49,7 +49,12 @@ class EventListTableViewCell: UITableViewCell {
         
         let status = EventStatus(with: event.status.type)
         if status != .finished {
-            finalScoreView.isHidden = true
+            finalOrDateLabel.adjustsFontSizeToFitWidth = true
+            finalOrDateLabel.text = Date.schedulePretty(fromIsoDate: event.startDate)
+            
+            if status == .inProgress {
+                finalOrDateLabel.textColor = .systemGreen
+            }
         }
     }
 }

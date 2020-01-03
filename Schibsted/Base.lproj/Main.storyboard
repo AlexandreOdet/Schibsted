@@ -115,7 +115,7 @@
                                             <outlet property="awayTeamLogoImg" destination="Qyf-9d-x11" id="tTg-3J-GTc"/>
                                             <outlet property="awayTeamNameLabel" destination="lJ7-Rd-Lcn" id="qEi-KC-Anp"/>
                                             <outlet property="awayTeamScoreLabel" destination="okp-9q-Ux1" id="MoQ-4c-jMh"/>
-                                            <outlet property="finalScoreView" destination="QAL-AJ-o0R" id="qxc-vD-PUP"/>
+                                            <outlet property="finalOrDateLabel" destination="1Xb-Hh-Dwk" id="Q13-XM-62L"/>
                                             <outlet property="homeTeamLogoImg" destination="237-hm-nLf" id="1cC-z1-6VK"/>
                                             <outlet property="homeTeamNameLabel" destination="Qe2-4C-XwI" id="1OQ-ur-h0f"/>
                                             <outlet property="homeTeamScoreLabel" destination="6Q0-Ag-MsQ" id="Qgw-pt-Sl7"/>
@@ -140,6 +140,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="78"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Oji-fM-BNl">
+            <objects>
+                <viewController id="x52-83-0Wj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rnc-VS-cBd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="5W6-C4-8iV"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qro-xh-KGp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1001" y="78"/>
         </scene>
     </scenes>
 </document>

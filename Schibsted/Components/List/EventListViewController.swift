@@ -83,6 +83,7 @@ class EventListViewController: UIViewController, Reachable {
             tableView, indexPath, event in
             let cell = tableView.dequeueReusableCell(withIdentifier: self.cellEventIdentifier) as! EventListTableViewCell
             cell.build(with: event)
+            cell.selectionStyle = .none
             return cell
         })
         return dataSource
@@ -118,6 +119,10 @@ extension EventListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 60
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //To-Do: Display event detail
     }
 }
 

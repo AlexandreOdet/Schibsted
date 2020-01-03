@@ -26,6 +26,8 @@
 		FAFAA4E223BFABAB00E3CF97 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFAA4E123BFABAB00E3CF97 /* UIImageViewExtension.swift */; };
 		FAFAA4E523BFB53300E3CF97 /* EventTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFAA4E423BFB53300E3CF97 /* EventTableViewHeaderView.swift */; };
 		FAFAA4E723BFB56000E3CF97 /* EventTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAFAA4E623BFB56000E3CF97 /* EventTableViewHeaderView.xib */; };
+		FAFAA4E923BFBD5C00E3CF97 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFAA4E823BFBD5C00E3CF97 /* EventDetailViewController.swift */; };
+		FAFAA4EB23BFBFE500E3CF97 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFAA4EA23BFBFE500E3CF97 /* DateExtension.swift */; };
 		FAFB839C23BE140900B1B524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB839B23BE140900B1B524 /* AppDelegate.swift */; };
 		FAFB839E23BE140900B1B524 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB839D23BE140900B1B524 /* SceneDelegate.swift */; };
 		FAFB83A023BE140900B1B524 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB839F23BE140900B1B524 /* EventListViewController.swift */; };
@@ -69,6 +71,8 @@
 		FAFAA4E123BFABAB00E3CF97 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		FAFAA4E423BFB53300E3CF97 /* EventTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewHeaderView.swift; sourceTree = "<group>"; };
 		FAFAA4E623BFB56000E3CF97 /* EventTableViewHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewHeaderView.xib; sourceTree = "<group>"; };
+		FAFAA4E823BFBD5C00E3CF97 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		FAFAA4EA23BFBFE500E3CF97 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		FAFB839823BE140900B1B524 /* Schibsted.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Schibsted.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFB839B23BE140900B1B524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFB839D23BE140900B1B524 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 		FAFAA4D923BF75C700E3CF97 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				FAFAA4E823BFBD5C00E3CF97 /* EventDetailViewController.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				FAFAA4E123BFABAB00E3CF97 /* UIImageViewExtension.swift */,
+				FAFAA4EA23BFBFE500E3CF97 /* DateExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -450,11 +456,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAE443E123BE1A3E0070A572 /* Cancellable.swift in Sources */,
+				FAFAA4EB23BFBFE500E3CF97 /* DateExtension.swift in Sources */,
 				FAFAA4DF23BF9D3E00E3CF97 /* EventListTableViewCell.swift in Sources */,
 				FAFAA4DC23BF995500E3CF97 /* NetworkError.swift in Sources */,
 				FAFB83A023BE140900B1B524 /* EventListViewController.swift in Sources */,
 				FAE443F123BE22360070A572 /* Team.swift in Sources */,
 				FAFB839C23BE140900B1B524 /* AppDelegate.swift in Sources */,
+				FAFAA4E923BFBD5C00E3CF97 /* EventDetailViewController.swift in Sources */,
 				FAE443F523BE26E90070A572 /* Score.swift in Sources */,
 				FAE443F323BE26D00070A572 /* Result.swift in Sources */,
 				FAFAA4E523BFB53300E3CF97 /* EventTableViewHeaderView.swift in Sources */,
