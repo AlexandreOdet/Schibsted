@@ -19,6 +19,8 @@ class EventListTableViewCell: UITableViewCell {
     @IBOutlet weak var awayTeamNameLabel: UILabel!
     @IBOutlet weak var awayTeamLogoImg: UIImageView!
     
+    @IBOutlet weak var finalScoreView: UIView!
+    
     let boldFont = UIFont.boldSystemFont(ofSize: 16.0)
     
     func build(with event: Event) {
@@ -43,6 +45,11 @@ class EventListTableViewCell: UITableViewCell {
                 awayTeamNameLabel.font = boldFont
                 awayTeamScoreLabel.font = boldFont
             }
+        }
+        
+        let status = EventStatus(with: event.status.type)
+        if status != .finished {
+            finalScoreView.isHidden = true
         }
     }
 }
