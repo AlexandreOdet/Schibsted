@@ -14,6 +14,9 @@ final class RestAPIEvent: RestAPIBase {
     
     func getEventsList() -> AnyPublisher<[League], Error> {
         var future: Future<[League], Error> { return Future { promise in
+            if !self.isNetworkAvailable {
+                promise(.failure(NetworkError.unreachable))
+            }
             AF.request(self.baseUrl, parameters: ["date":"today"])
                 .validate(statusCode: 200..<300)
                 .responseDecodable(completionHandler: { (response: DataResponse<[League], AFError>) -> Void in

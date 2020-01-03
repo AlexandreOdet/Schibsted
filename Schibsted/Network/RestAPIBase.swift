@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-class RestAPIBase: Cancellable {
+class RestAPIBase: Cancellable, Reachable {
     var currentRequest: Alamofire.Request?
     
     let baseUrl = "https://sports-app-code-test.herokuapp.com/api/events"

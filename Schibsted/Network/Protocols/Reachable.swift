@@ -12,8 +12,6 @@ import UIKit
 
 protocol Reachable {
     var isNetworkAvailable: Bool { get }
-    
-    func alertWhenNetworkNotAvailable()
 }
 
 extension Reachable {
@@ -40,7 +38,8 @@ extension Reachable {
 extension Reachable where Self: UIViewController {
     func alertWhenNetworkNotAvailable() {
         let alert = UIAlertController(title: "Warning", message: "Network is not available", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
     }
 }

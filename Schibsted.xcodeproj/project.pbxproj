@@ -21,6 +21,8 @@
 		FAE443F323BE26D00070A572 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443F223BE26D00070A572 /* Result.swift */; };
 		FAE443F523BE26E90070A572 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443F423BE26E90070A572 /* Score.swift */; };
 		FAE443F723BE27580070A572 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE443F623BE27580070A572 /* Status.swift */; };
+		FAFAA4DC23BF995500E3CF97 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFAA4DB23BF995500E3CF97 /* NetworkError.swift */; };
+		FAFAA4DF23BF9D3E00E3CF97 /* EventListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFAA4DE23BF9D3E00E3CF97 /* EventListTableViewCell.swift */; };
 		FAFB839C23BE140900B1B524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB839B23BE140900B1B524 /* AppDelegate.swift */; };
 		FAFB839E23BE140900B1B524 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB839D23BE140900B1B524 /* SceneDelegate.swift */; };
 		FAFB83A023BE140900B1B524 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB839F23BE140900B1B524 /* EventListViewController.swift */; };
@@ -59,6 +61,8 @@
 		FAE443F223BE26D00070A572 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		FAE443F423BE26E90070A572 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		FAE443F623BE27580070A572 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		FAFAA4DB23BF995500E3CF97 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		FAFAA4DE23BF9D3E00E3CF97 /* EventListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListTableViewCell.swift; sourceTree = "<group>"; };
 		FAFB839823BE140900B1B524 /* Schibsted.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Schibsted.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFB839B23BE140900B1B524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFB839D23BE140900B1B524 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 			children = (
 				FAE443DD23BE17F20070A572 /* EventStatus.swift */,
 				FAE443EA23BE1E1C0070A572 /* ImageSize.swift */,
+				FAFAA4DB23BF995500E3CF97 /* NetworkError.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 		FAFAA4D823BF75BB00E3CF97 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				FAFAA4DD23BF9D2C00E3CF97 /* customCells */,
 				FAFB839F23BE140900B1B524 /* EventListViewController.swift */,
 			);
 			path = List;
@@ -175,6 +181,21 @@
 			children = (
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		FAFAA4DD23BF9D2C00E3CF97 /* customCells */ = {
+			isa = PBXGroup;
+			children = (
+				FAFAA4DE23BF9D3E00E3CF97 /* EventListTableViewCell.swift */,
+			);
+			path = customCells;
+			sourceTree = "<group>";
+		};
+		FAFAA4E023BFA87200E3CF97 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		FAFB838F23BE140900B1B524 = {
@@ -200,6 +221,7 @@
 		FAFB839A23BE140900B1B524 /* Schibsted */ = {
 			isa = PBXGroup;
 			children = (
+				FAFAA4E023BFA87200E3CF97 /* Extension */,
 				FAE443DC23BE16960070A572 /* Enum */,
 				FAE443DB23BE14730070A572 /* Models */,
 				FAE443DA23BE146B0070A572 /* Components */,
@@ -410,6 +432,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAE443E123BE1A3E0070A572 /* Cancellable.swift in Sources */,
+				FAFAA4DF23BF9D3E00E3CF97 /* EventListTableViewCell.swift in Sources */,
+				FAFAA4DC23BF995500E3CF97 /* NetworkError.swift in Sources */,
 				FAFB83A023BE140900B1B524 /* EventListViewController.swift in Sources */,
 				FAE443F123BE22360070A572 /* Team.swift in Sources */,
 				FAFB839C23BE140900B1B524 /* AppDelegate.swift in Sources */,
