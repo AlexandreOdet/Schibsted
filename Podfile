@@ -1,7 +1,7 @@
 use_frameworks!
 
 def common_pods
-  pod 'Alamofire'
+  pod 'Alamofire', '~> 5.0.0-rc.3'
 end
 
 target 'Schibsted' do

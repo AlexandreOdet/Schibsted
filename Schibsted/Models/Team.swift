@@ -9,7 +9,7 @@
 import Foundation
 
 class Team: Codable {
-    var id: Int
+    var id: String
     var name: String
     var logoUrl: String
     var isWinner: Bool

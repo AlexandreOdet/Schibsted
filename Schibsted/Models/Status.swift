@@ -9,5 +9,5 @@
 import Foundation
 
 class Status: Codable {
-    var type: StatusType
+    var type: String
 }
