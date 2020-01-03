@@ -19,11 +19,30 @@ class EventListTableViewCell: UITableViewCell {
     @IBOutlet weak var awayTeamNameLabel: UILabel!
     @IBOutlet weak var awayTeamLogoImg: UIImageView!
     
+    let boldFont = UIFont.boldSystemFont(ofSize: 16.0)
+    
     func build(with event: Event) {
-        homeTeamScoreLabel.text = "\(event.result.runningScore.home)"
-        awayTeamScoreLabel.text = "\(event.result.runningScore.away)"
+        
+        let homeScore = event.result.runningScore.home
+        let awayScore = event.result.runningScore.away
+        
+        homeTeamScoreLabel.text = "\(homeScore)"
+        awayTeamScoreLabel.text = "\(awayScore)"
         
         homeTeamNameLabel.text = event.homeTeam.name
         awayTeamNameLabel.text = event.awayTeam.name
+        
+        homeTeamLogoImg.setImageFromUrl(url: event.homeTeam.logoUrl, withSize: .small)
+        awayTeamLogoImg.setImageFromUrl(url: event.awayTeam.logoUrl, withSize: .small)
+        
+        if homeScore != awayScore {
+            if homeScore > awayScore {
+                homeTeamScoreLabel.font = boldFont
+                homeTeamNameLabel.font = boldFont
+            } else {
+                awayTeamNameLabel.font = boldFont
+                awayTeamScoreLabel.font = boldFont
+            }
+        }
     }
 }
