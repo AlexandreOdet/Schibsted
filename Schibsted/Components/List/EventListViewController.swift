@@ -8,6 +8,7 @@
 
 import UIKit
 import Combine
+import SwiftOverlays
 
 class EventListViewController: UIViewController, Reachable {
     
@@ -15,6 +16,8 @@ class EventListViewController: UIViewController, Reachable {
     @IBOutlet weak var leaguesTableView: UITableView!
     private lazy var dataSource = setUpDataSource()
     private let cellEventIdentifier = "eventCell"
+    private let headerViewIdentifier = "eventHeaderView"
+    private let refreshControl = UIRefreshControl()
     
     //Combine+Network
     private var cancellableSet = Set<AnyCancellable>()
@@ -29,15 +32,37 @@ class EventListViewController: UIViewController, Reachable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let nib = UINib(nibName: "EventTableViewHeaderView", bundle: nil)
+        
+        leaguesTableView.register(nib, forHeaderFooterViewReuseIdentifier: headerViewIdentifier)
         leaguesTableView.delegate = self
         leaguesTableView.dataSource = dataSource
         
+        refreshControl.addTarget(self, action: #selector(fetchData), for: .valueChanged)
+        
+        if #available(iOS 10.0, *) {
+            leaguesTableView.refreshControl = refreshControl
+        } else {
+            leaguesTableView.addSubview(refreshControl)
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        fetchData()
+    }
+    
+    @objc func fetchData() {
+        showWaitOverlayWithText("Loading...")
         restAPIEvent.getEventsList()
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: {
                 completion in
                 switch completion {
                 case .finished:
+                    self.removeAllOverlays()
+                    self.refreshControl.endRefreshing()
                     break //Everything is OK.
                 case .failure(let error):
                     if error is NetworkError {
@@ -65,12 +90,12 @@ class EventListViewController: UIViewController, Reachable {
     
     private func updateTableView() {
         var snapshot =  NSDiffableDataSourceSnapshot<Int, Event>()
-        let sectionIdentifiers: [Int] = Array(0...leagues.count)
+        let sectionIdentifiers: [Int] = Array(0...leagues.count-1)
         snapshot.appendSections(sectionIdentifiers)
         for i in 0..<leagues.count {
             snapshot.appendItems(leagues[i].events, toSection: i)
         }
-        dataSource.apply(snapshot)
+        dataSource.apply(snapshot, animatingDifferences: false)
     }
     
     private func displayAlertOnError() {
@@ -84,7 +109,11 @@ class EventListViewController: UIViewController, Reachable {
 
 extension EventListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return UIView()
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerViewIdentifier) as! EventTableViewHeaderView
+        let currentLeague = leagues[section]
+        headerView.build(with: currentLeague)
+
+        return headerView
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

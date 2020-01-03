@@ -24,6 +24,8 @@
 		FAFAA4DC23BF995500E3CF97 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFAA4DB23BF995500E3CF97 /* NetworkError.swift */; };
 		FAFAA4DF23BF9D3E00E3CF97 /* EventListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFAA4DE23BF9D3E00E3CF97 /* EventListTableViewCell.swift */; };
 		FAFAA4E223BFABAB00E3CF97 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFAA4E123BFABAB00E3CF97 /* UIImageViewExtension.swift */; };
+		FAFAA4E523BFB53300E3CF97 /* EventTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFAA4E423BFB53300E3CF97 /* EventTableViewHeaderView.swift */; };
+		FAFAA4E723BFB56000E3CF97 /* EventTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAFAA4E623BFB56000E3CF97 /* EventTableViewHeaderView.xib */; };
 		FAFB839C23BE140900B1B524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB839B23BE140900B1B524 /* AppDelegate.swift */; };
 		FAFB839E23BE140900B1B524 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB839D23BE140900B1B524 /* SceneDelegate.swift */; };
 		FAFB83A023BE140900B1B524 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB839F23BE140900B1B524 /* EventListViewController.swift */; };
@@ -65,6 +67,8 @@
 		FAFAA4DB23BF995500E3CF97 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		FAFAA4DE23BF9D3E00E3CF97 /* EventListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListTableViewCell.swift; sourceTree = "<group>"; };
 		FAFAA4E123BFABAB00E3CF97 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		FAFAA4E423BFB53300E3CF97 /* EventTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewHeaderView.swift; sourceTree = "<group>"; };
+		FAFAA4E623BFB56000E3CF97 /* EventTableViewHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewHeaderView.xib; sourceTree = "<group>"; };
 		FAFB839823BE140900B1B524 /* Schibsted.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Schibsted.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFB839B23BE140900B1B524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFB839D23BE140900B1B524 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -172,6 +176,7 @@
 		FAFAA4D823BF75BB00E3CF97 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				FAFAA4E323BFB51E00E3CF97 /* customHeader */,
 				FAFAA4DD23BF9D2C00E3CF97 /* customCells */,
 				FAFB839F23BE140900B1B524 /* EventListViewController.swift */,
 			);
@@ -199,6 +204,15 @@
 				FAFAA4E123BFABAB00E3CF97 /* UIImageViewExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		FAFAA4E323BFB51E00E3CF97 /* customHeader */ = {
+			isa = PBXGroup;
+			children = (
+				FAFAA4E423BFB53300E3CF97 /* EventTableViewHeaderView.swift */,
+				FAFAA4E623BFB56000E3CF97 /* EventTableViewHeaderView.xib */,
+			);
+			path = customHeader;
 			sourceTree = "<group>";
 		};
 		FAFB838F23BE140900B1B524 = {
@@ -335,6 +349,7 @@
 			files = (
 				FAFB83A823BE140A00B1B524 /* LaunchScreen.storyboard in Resources */,
 				FAFB83A523BE140A00B1B524 /* Assets.xcassets in Resources */,
+				FAFAA4E723BFB56000E3CF97 /* EventTableViewHeaderView.xib in Resources */,
 				FAFB83A323BE140900B1B524 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +457,7 @@
 				FAFB839C23BE140900B1B524 /* AppDelegate.swift in Sources */,
 				FAE443F523BE26E90070A572 /* Score.swift in Sources */,
 				FAE443F323BE26D00070A572 /* Result.swift in Sources */,
+				FAFAA4E523BFB53300E3CF97 /* EventTableViewHeaderView.swift in Sources */,
 				FAE443E523BE1BE40070A572 /* RestAPIBase.swift in Sources */,
 				FAE443EF23BE21030070A572 /* Event.swift in Sources */,
 				FAE443E323BE1A5B0070A572 /* Reachable.swift in Sources */,
