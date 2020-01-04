@@ -18,6 +18,8 @@ class EventDetailViewController: UIViewController, Reachable {
     private let restApiEvent = RestAPIEvent()
     private var cancellableSet = Set<AnyCancellable>()
     
+    @IBOutlet weak var eventDateLabel: UILabel!
+    
     @IBOutlet weak var homeTeamLogo: UIImageView!
     @IBOutlet weak var homeTeamScoreLabel: UILabel!
     @IBOutlet weak var homeTeamNameLabel: UILabel!
@@ -26,6 +28,8 @@ class EventDetailViewController: UIViewController, Reachable {
     @IBOutlet weak var awayTeamScoreLabel: UILabel!
     @IBOutlet weak var awayTeamNameLabel: UILabel!
     
+    @IBOutlet weak var eventVenueLabel: UILabel!
+    @IBOutlet weak var finalOrDashLabel: UILabel!
     
     deinit { //Cancel request when controller is deinit
         restApiEvent.cancel()
@@ -51,6 +55,9 @@ class EventDetailViewController: UIViewController, Reachable {
                     }
                 }
             }, receiveValue: { detail in
+                
+                self.eventDateLabel.text = Date.schedulePretty(fromIsoDate: detail.event.startDate)
+                
                 self.homeTeamLogo.setImageFromUrl(url: detail.event.homeTeam.logoUrl, withSize: .medium)
                 self.homeTeamScoreLabel.text = "\(detail.event.result.runningScore.home)"
                 self.homeTeamNameLabel.text = detail.event.homeTeam.name
@@ -61,13 +68,23 @@ class EventDetailViewController: UIViewController, Reachable {
                 self.awayTeamNameLabel.text = detail.event.awayTeam.name
                 self.awayTeamNameLabel.adjustsFontSizeToFitWidth = true
                 
+                if let venue = detail.event.venue {
+                    self.eventVenueLabel.text = "Event at \(venue.name) in \(venue.city)"
+                }
+                
                 let status = EventStatus(with: detail.event.status.type)
                 if status == .inProgress {
                     self.awayTeamScoreLabel.textColor = .systemGreen
                     self.homeTeamScoreLabel.textColor = .systemGreen
+                } else if status == .finished {
+                    self.finalOrDashLabel.text = "FINAL"
                 }
             })
         .store(in: &cancellableSet)
+    }
+    
+    @IBAction func didClickCloseButton() {
+        dismiss(animated: true, completion: nil)
     }
     
 }
