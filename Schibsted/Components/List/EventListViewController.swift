@@ -55,14 +55,14 @@ class EventListViewController: UIViewController, Reachable {
     
     @objc func fetchData() {
         showWaitOverlayWithText("Loading...")
-        restAPIEvent.getEventsList()
+        restAPIEvent.getEvents()
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: {
                 completion in
+                self.removeAllOverlays()
+                self.refreshControl.endRefreshing()
                 switch completion {
                 case .finished:
-                    self.removeAllOverlays()
-                    self.refreshControl.endRefreshing()
                     break //Everything is OK.
                 case .failure(let error):
                     if error is NetworkError {
@@ -98,14 +98,6 @@ class EventListViewController: UIViewController, Reachable {
         }
         dataSource.apply(snapshot, animatingDifferences: false)
     }
-    
-    private func displayAlertOnError() {
-        let alert = UIAlertController(title: "Oops", message: "It seems that something went wrong.", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        alert.addAction(okAction)
-        present(alert, animated: true, completion: nil)
-    }
-
 }
 
 extension EventListViewController: UITableViewDelegate {
@@ -113,7 +105,7 @@ extension EventListViewController: UITableViewDelegate {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerViewIdentifier) as! EventTableViewHeaderView
         let currentLeague = leagues[section]
         headerView.build(with: currentLeague)
-
+        
         return headerView
     }
     
@@ -123,6 +115,14 @@ extension EventListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //To-Do: Display event detail
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let detailViewController = storyboard.instantiateViewController(withIdentifier: "eventDetail") as? EventDetailViewController else {
+            return
+        }
+        let currentLeague = leagues[indexPath.section]
+        let event = currentLeague.events[indexPath.row]
+        detailViewController.eventId = event.id
+        present(detailViewController, animated: true, completion: nil)
     }
 }
 

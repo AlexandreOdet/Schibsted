@@ -15,6 +15,7 @@ class Event: Codable {
     var awayTeam: Team
     var result: Result
     var status: Status
+    var venue: Venue?
 }
 
 extension Event: Hashable {
