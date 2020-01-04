@@ -182,28 +182,41 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFq-xw-3Ed">
-                                <rect key="frame" x="50" y="165" width="42" height="20.5"/>
+                                <rect key="frame" x="50" y="165" width="157" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUo-Sg-c3J">
-                                <rect key="frame" x="315" y="170" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUo-Sg-c3J">
+                                <rect key="frame" x="207" y="165" width="157" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qnV-zo-E4l">
+                                <rect key="frame" x="20" y="201" width="374" height="3"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="jMi-PE-HOV"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="qnV-zo-E4l" firstAttribute="trailing" secondItem="5W6-C4-8iV" secondAttribute="trailing" constant="-20" id="5Q1-Nx-HmP"/>
                             <constraint firstItem="twG-FV-ikq" firstAttribute="top" secondItem="5W6-C4-8iV" secondAttribute="top" constant="50" id="66W-h6-WMP"/>
                             <constraint firstItem="twG-FV-ikq" firstAttribute="trailing" secondItem="5W6-C4-8iV" secondAttribute="trailing" constant="-50" id="6Df-tQ-cX9"/>
+                            <constraint firstItem="qnV-zo-E4l" firstAttribute="top" secondItem="CUo-Sg-c3J" secondAttribute="bottom" constant="15" id="6kp-hJ-KQN"/>
                             <constraint firstItem="eSk-Ls-66b" firstAttribute="top" secondItem="5W6-C4-8iV" secondAttribute="top" constant="50" id="8dP-z5-wL9"/>
+                            <constraint firstItem="CUo-Sg-c3J" firstAttribute="leading" secondItem="5W6-C4-8iV" secondAttribute="centerX" id="D5f-yC-y1b"/>
                             <constraint firstItem="AM9-wf-pS9" firstAttribute="centerX" secondItem="5W6-C4-8iV" secondAttribute="centerX" id="Eg2-6q-9h4"/>
+                            <constraint firstItem="qnV-zo-E4l" firstAttribute="leading" secondItem="5W6-C4-8iV" secondAttribute="leading" constant="20" id="H19-1z-zBn"/>
+                            <constraint firstItem="CUo-Sg-c3J" firstAttribute="top" secondItem="twG-FV-ikq" secondAttribute="bottom" constant="15" id="VL1-kn-fL0"/>
+                            <constraint firstItem="CUo-Sg-c3J" firstAttribute="trailing" secondItem="twG-FV-ikq" secondAttribute="trailing" id="VS2-Uw-oxz"/>
                             <constraint firstItem="JFq-xw-3Ed" firstAttribute="top" secondItem="eSk-Ls-66b" secondAttribute="bottom" constant="15" id="WR6-5R-1s4"/>
                             <constraint firstItem="UOv-Lf-P7H" firstAttribute="trailing" secondItem="twG-FV-ikq" secondAttribute="leading" constant="-30" id="aD1-Xn-wO7"/>
                             <constraint firstItem="TPX-vt-Le9" firstAttribute="centerY" secondItem="eSk-Ls-66b" secondAttribute="centerY" id="aGQ-Gb-boL"/>
+                            <constraint firstItem="JFq-xw-3Ed" firstAttribute="trailing" secondItem="5W6-C4-8iV" secondAttribute="centerX" id="aWh-yh-SdE"/>
                             <constraint firstItem="eSk-Ls-66b" firstAttribute="leading" secondItem="5W6-C4-8iV" secondAttribute="leading" constant="50" id="nSd-CM-HDm"/>
                             <constraint firstItem="UOv-Lf-P7H" firstAttribute="centerY" secondItem="twG-FV-ikq" secondAttribute="centerY" id="pwH-fd-eTc"/>
                             <constraint firstItem="AM9-wf-pS9" firstAttribute="centerY" secondItem="twG-FV-ikq" secondAttribute="centerY" id="rjP-wm-NgL"/>
@@ -214,8 +227,10 @@
                     </view>
                     <connections>
                         <outlet property="awayTeamLogo" destination="twG-FV-ikq" id="r2n-ed-hb9"/>
+                        <outlet property="awayTeamNameLabel" destination="CUo-Sg-c3J" id="XEC-ll-Sxm"/>
                         <outlet property="awayTeamScoreLabel" destination="UOv-Lf-P7H" id="OsI-ag-fmg"/>
                         <outlet property="homeTeamLogo" destination="eSk-Ls-66b" id="uMi-es-vbq"/>
+                        <outlet property="homeTeamNameLabel" destination="JFq-xw-3Ed" id="2cG-WH-AAT"/>
                         <outlet property="homeTeamScoreLabel" destination="TPX-vt-Le9" id="Hj6-uf-sdV"/>
                     </connections>
                 </viewController>

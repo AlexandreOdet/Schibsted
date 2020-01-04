@@ -52,13 +52,19 @@ class EventDetailViewController: UIViewController, Reachable {
                 }
             }, receiveValue: { detail in
                 self.homeTeamLogo.setImageFromUrl(url: detail.event.homeTeam.logoUrl, withSize: .medium)
+                self.homeTeamScoreLabel.text = "\(detail.event.result.runningScore.home)"
+                self.homeTeamNameLabel.text = detail.event.homeTeam.name
+                self.homeTeamNameLabel.adjustsFontSizeToFitWidth = true
+                
                 self.awayTeamLogo.setImageFromUrl(url: detail.event.awayTeam.logoUrl, withSize: .medium)
                 self.awayTeamScoreLabel.text = "\(detail.event.result.runningScore.away)"
-                self.homeTeamScoreLabel.text = "\(detail.event.result.runningScore.home)"
+                self.awayTeamNameLabel.text = detail.event.awayTeam.name
+                self.awayTeamNameLabel.adjustsFontSizeToFitWidth = true
                 
                 let status = EventStatus(with: detail.event.status.type)
                 if status == .inProgress {
-                    
+                    self.awayTeamScoreLabel.textColor = .systemGreen
+                    self.homeTeamScoreLabel.textColor = .systemGreen
                 }
             })
         .store(in: &cancellableSet)
