@@ -31,10 +31,10 @@
 		FAFAA4ED23C0917F00E3CF97 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFAA4EC23C0917F00E3CF97 /* Venue.swift */; };
 		FAFAA4EF23C0984B00E3CF97 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFAA4EE23C0984B00E3CF97 /* UIViewControllerExtension.swift */; };
 		FAFAA4F123C0A4C200E3CF97 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFAA4F023C0A4C200E3CF97 /* Detail.swift */; };
-		FAFAA4F423C1F3DA00E3CF97 /* Events.json in Sources */ = {isa = PBXBuildFile; fileRef = FAFAA4F323C1F3DA00E3CF97 /* Events.json */; };
 		FAFAA4F623C1F42F00E3CF97 /* EventDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = FAFAA4F523C1F42F00E3CF97 /* EventDetail.json */; };
-		FAFAA4F823C1F57600E3CF97 /* League+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFAA4F723C1F57600E3CF97 /* League+Test.swift */; };
+		FAFAA4F823C1F57600E3CF97 /* League+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFAA4F723C1F57600E3CF97 /* League+Tests.swift */; };
 		FAFAA4FA23C2171100E3CF97 /* Detail+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFAA4F923C2171100E3CF97 /* Detail+Tests.swift */; };
+		FAFAA4FB23C2211200E3CF97 /* Events.json in Resources */ = {isa = PBXBuildFile; fileRef = FAFAA4F323C1F3DA00E3CF97 /* Events.json */; };
 		FAFB839C23BE140900B1B524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB839B23BE140900B1B524 /* AppDelegate.swift */; };
 		FAFB839E23BE140900B1B524 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB839D23BE140900B1B524 /* SceneDelegate.swift */; };
 		FAFB83A023BE140900B1B524 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB839F23BE140900B1B524 /* EventListViewController.swift */; };
@@ -85,7 +85,7 @@
 		FAFAA4F023C0A4C200E3CF97 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		FAFAA4F323C1F3DA00E3CF97 /* Events.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Events.json; sourceTree = "<group>"; };
 		FAFAA4F523C1F42F00E3CF97 /* EventDetail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EventDetail.json; sourceTree = "<group>"; };
-		FAFAA4F723C1F57600E3CF97 /* League+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "League+Test.swift"; sourceTree = "<group>"; };
+		FAFAA4F723C1F57600E3CF97 /* League+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "League+Tests.swift"; sourceTree = "<group>"; };
 		FAFAA4F923C2171100E3CF97 /* Detail+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Detail+Tests.swift"; sourceTree = "<group>"; };
 		FAFB839823BE140900B1B524 /* Schibsted.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Schibsted.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFB839B23BE140900B1B524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -291,7 +291,7 @@
 				FAFAA4F223C1F3BB00E3CF97 /* Resources */,
 				FAFB83B223BE140A00B1B524 /* SchibstedTests.swift */,
 				FAFB83B423BE140A00B1B524 /* Info.plist */,
-				FAFAA4F723C1F57600E3CF97 /* League+Test.swift */,
+				FAFAA4F723C1F57600E3CF97 /* League+Tests.swift */,
 				FAFAA4F923C2171100E3CF97 /* Detail+Tests.swift */,
 			);
 			path = SchibstedTests;
@@ -393,6 +393,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAFAA4FB23C2211200E3CF97 /* Events.json in Resources */,
 				FAFAA4F623C1F42F00E3CF97 /* EventDetail.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,8 +517,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAFAA4F823C1F57600E3CF97 /* League+Test.swift in Sources */,
-				FAFAA4F423C1F3DA00E3CF97 /* Events.json in Sources */,
+				FAFAA4F823C1F57600E3CF97 /* League+Tests.swift in Sources */,
 				FAFAA4FA23C2171100E3CF97 /* Detail+Tests.swift in Sources */,
 				FAFB83B323BE140A00B1B524 /* SchibstedTests.swift in Sources */,
 			);

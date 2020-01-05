@@ -18,7 +18,7 @@ class Event: Codable {
     var venue: Venue?
 }
 
-extension Event: Hashable {
+extension Event: Hashable { //Conforms to Hashable and Equatable to use in UITableViewDiffableDataSource.
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }

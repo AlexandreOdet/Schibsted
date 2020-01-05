@@ -24,7 +24,7 @@ class EventListViewController: UIViewController, Reachable {
     let restAPIEvent = RestAPIEvent()
     
     //Data
-    var leagues = [League]() {
+    var leagues: [League]! {
         didSet {
             self.updateTableView()
         }
@@ -48,8 +48,8 @@ class EventListViewController: UIViewController, Reachable {
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         fetchData()
     }
     
@@ -114,7 +114,6 @@ extension EventListViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //To-Do: Display event detail
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let detailViewController = storyboard.instantiateViewController(withIdentifier: "eventDetail") as? EventDetailViewController else {
             return

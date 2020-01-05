@@ -11,7 +11,7 @@ import Alamofire
 import UIKit
 
 extension UIImageView {
-    func setImageFromUrl(url: String, withSize size: ImageSize) {
+    func setImage(fromUrl url: String, withSize size: ImageSize) {
         //rule=clip-[dimension]x[dimension]
         let parameters = ["rule":"clip-\(size.size)x\(size.size)"]
         AF.request(url, parameters: parameters)

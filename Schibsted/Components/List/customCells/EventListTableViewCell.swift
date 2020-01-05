@@ -34,8 +34,8 @@ class EventListTableViewCell: UITableViewCell {
         homeTeamNameLabel.text = event.homeTeam.name
         awayTeamNameLabel.text = event.awayTeam.name
         
-        homeTeamLogoImg.setImageFromUrl(url: event.homeTeam.logoUrl, withSize: .small)
-        awayTeamLogoImg.setImageFromUrl(url: event.awayTeam.logoUrl, withSize: .small)
+        homeTeamLogoImg.setImage(fromUrl: event.homeTeam.logoUrl, withSize: .small)
+        awayTeamLogoImg.setImage(fromUrl: event.awayTeam.logoUrl, withSize: .small)
         
         if homeScore != awayScore {
             if homeScore > awayScore {

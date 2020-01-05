@@ -15,6 +15,6 @@ class EventTableViewHeaderView: UITableViewHeaderFooterView {
     
     func build(with league: League) {
         leagueNameLabel.text = league.name
-        leagueLogoImg.setImageFromUrl(url: league.logoUrl, withSize: .small)
+        leagueLogoImg.setImage(fromUrl: league.logoUrl, withSize: .small)
     }
 }
