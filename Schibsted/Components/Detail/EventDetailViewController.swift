@@ -47,7 +47,6 @@ class EventDetailViewController: UIViewController, Reachable {
                 case .finished:
                 break //Everything is OK.
                 case .failure(let error):
-                    self.removeAllOverlays()
                     if error is NetworkError {
                         self.alertWhenNetworkNotAvailable() //We have no network
                     } else {

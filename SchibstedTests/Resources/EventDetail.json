@@ -1,0 +1,31 @@
+{
+  "event": {
+    "id": 389093,
+    "startDate": "2019-08-31T14:00:00Z",
+    "homeTeam": {
+      "id": "1737",
+      "name": "Leicester City",
+      "logoUrl": "https://cdn-yams.schibsted.com/api/v1/sports-pro/images/50/502b4330-16ec-4b30-ab89-8cef350b1c06",
+      "isWinner": false
+    },
+    "awayTeam": {
+      "id": "1750",
+      "name": "AFC Bournemouth",
+      "logoUrl": "https://cdn-yams.schibsted.com/api/v1/sports-pro/images/b9/b90d716a-d2f3-4dca-9110-0067337eaf3d",
+      "isWinner": false
+    },
+    "venue": {
+      "name": "King Power Stadium",
+      "city": "Leicester"
+    },
+    "status": {
+      "type": "inProgress"
+    },
+    "result": {
+      "runningScore": {
+        "home": 1,
+        "away": 4
+      }
+    }
+  }
+}
